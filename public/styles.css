@@ -1,0 +1,365 @@
+.slider {
+  clear: both;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 1000px;
+  height: 600px;
+  border-radius: 10px;
+  left: 300px;
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: #000;
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+}
+
+.text-overlay {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
+  position: relative;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .text-overlay {
+    width: 400px;
+  }
+}
+
+.credit {
+  color: #3e3e3f;
+  margin-top: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.logo-container {
+  position: absolute;
+  top: 650px;
+  left: 5%;
+  z-index: 10;
+}
+
+.logo {
+  width: auto;
+  height: 100px;
+}
+
+.calculator {
+  clear: both;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 3px 3px 17px 0px rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+  text-align: center;
+  color: #32cd32;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: fantasy;
+}
+
+p {
+  font-size: 12px;
+  text-align: center;
+  color: #808080;
+}
+
+label {
+  font-size: 22px;
+  color: #ccffcc;
+}
+
+input[type="number"],
+select {
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 9999px;
+  border: none;
+  outline: none;
+  box-shadow: inset 2px 5px 10px black;
+  margin-bottom: 2px;
+  max-width: 200px;
+}
+
+select {
+  width: 220px;
+}
+
+.findYourSize {
+  margin-bottom: 50px;
+  margin-top: 25px;
+  --glow-color: #99ff66;
+  --glow-spread-color: #66ff66;
+  --enhanced-glow-color: #ccffcc;
+  --btn-color: #32cd32;
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+}
+
+.findYourSize::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.findYourSize:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.findYourSize:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+result {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+/* form styling */
+.formCard {
+  position: relative;
+  clear: both;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.formTitle {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  clear: both;
+  position: relative;
+}
+
+.form .group label {
+  clear: both;
+  font-size: 14px;
+  color: rgb(99, 102, 102);
+  position: absolute;
+  top: -10px;
+  left: 25px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form .group input,
+.form .group textarea {
+  clear: both;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  outline: 0;
+  width: 88%;
+  background-color: transparent;
+}
+
+.form .group input:placeholder-shown + label,
+.form .group textarea:placeholder-shown + label {
+  clear: both;
+  top: 10px;
+  background-color: transparent;
+}
+
+.form .group input:focus,
+.form .group textarea:focus {
+  border-color: #3366cc;
+}
+
+.form .group input:focus + label,
+.form .group textarea:focus + label {
+  clear: both;
+  top: -10px;
+  left: 10px;
+  background-color: #fff;
+  color: #3366cc;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form .group textarea {
+  clear: both;
+  resize: none;
+  height: 100px;
+}
+
+.form button {
+  background-color: #3366cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #27408b;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 10px;
+}
+
+footer p {
+  color: #2b03036b;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.body {
+  background: #ccc;
+  perspective-origin: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  overflow: hidden;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 16px;
+  vertical-align: middle;
+  height: 500px;
+  width: 350px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 20px 2px #ddd;
+  background: #eee;
+  color: #444;
+  transition: all 0.2s ease-in-out;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+.card-body {
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.card:hover {
+  box-shadow: 0 2px 20px 6px #ddd;
+  cursor: pointer;
+}
+.card-footer {
+  display: flex;
+  justify-items: flex-start;
+}
+
+.card-footer span {
+  padding-right: 16px;
+  color: #777;
+  transition: all 2s ease-in-out;
+}
+
+.card-footer span:hover {
+  color: #222;
+  transform: scale(1.01);
+}
