@@ -31,20 +31,14 @@ const ImageSlider = ({ slides }) => {
     <section className="slider">
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-      <div className="logo-container">
-        <img src={logo} alt="Logo" className="logo" />
-        <h6 className="credit">
-          Laurent Lopez riding a Cork bodyboard <br></br>Photos by Jeanpi
-          Guillotin
-        </h6>
-      </div>
+
       <div className="text-overlay">
-        <h2>
+        <h1>
           {slides.description}“Inspired by a passion for bodyboarding and a
           commitment to preserving our natural environment, we are dedicated to
           creating products that are crafted from eco-friendly materials,
           minimizing their impact on the planet.”
-        </h2>
+        </h1>
       </div>
       {SliderData.map((slide, index) => {
         return (
@@ -59,6 +53,13 @@ const ImageSlider = ({ slides }) => {
                   alt="riding cork bodyboard"
                   className="image"
                 />
+                <div className="logo-container">
+                  <img src={logo} alt="Logo" className="logo" />
+                  <h6 className="credit">
+                    Laurent Lopez riding a Cork bodyboard <br></br>Photos by
+                    Jeanpi Guillotin
+                  </h6>
+                </div>
               </>
             )}
           </div>

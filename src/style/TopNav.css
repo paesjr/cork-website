@@ -22,11 +22,17 @@ nav .list_item {
   text-transform: uppercase;
   margin-left: 10px;
   line-height: 80px;
-  padding: 15px;
+  padding: 4px;
 }
 nav .list_item:hover {
   color: #187bb1;
 }
+
+.menu_icon {
+  color: rgba(177, 147, 100, 1);
+  padding: 15px;
+}
+
 .bars {
   float: right;
   color: #fff;

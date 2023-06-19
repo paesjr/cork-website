@@ -3,27 +3,32 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import TopNav from "./components/TopNav";
 import Home from "./pages/Home.jsx";
 import Contact from "./pages/Contact.jsx";
-import Products from "./pages/Products.jsx";
+import Bodyboards from "./pages/Bodyboards.jsx";
 import Calculator from "./pages/Calculator.jsx";
 import Quote from "./pages/Quote.jsx";
-import Blog from "./pages/Blog";
-import Store from "./pages/Store";
+import { Shop } from "./pages/shop/shop";
+import { Cart } from "./pages/cart/cart";
+import { ShopContextProvider } from "./context/shop-context";
+import PostList from "./components/PostList";
 
 const App = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <TopNav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Products" element={<Products />} />
-          <Route path="/Calculator" element={<Calculator />} />
-          <Route path="/Quote" element={<Quote />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/Store" element={<Store />} />
-        </Routes>
-      </BrowserRouter>
+    <div className="App">
+      <ShopContextProvider>
+        <BrowserRouter>
+          <TopNav />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/Bodyboards" element={<Bodyboards />} />
+            <Route path="/Calculator" element={<Calculator />} />
+            <Route path="/Quote" element={<Quote />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/Blog" element={<PostList />} />
+            <Route path="/Shop" element={<Shop />} />
+            <Route path="/Cart" element={<Cart />} />
+          </Routes>
+        </BrowserRouter>
+      </ShopContextProvider>
     </div>
   );
 };

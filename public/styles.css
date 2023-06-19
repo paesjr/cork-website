@@ -1,7 +1,8 @@
+/* HOME */
 .slider {
   clear: both;
   position: relative;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,6 +14,7 @@
   border-radius: 10px;
   left: 300px;
   box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.5);
+  margin-bottom: 60px;
 }
 
 .right-arrow {
@@ -54,7 +56,7 @@
     -1px 1px 0 #000, 1px 1px 0 #000;
   position: relative;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -68,16 +70,18 @@
 }
 
 .credit {
-  color: #3e3e3f;
-  margin-top: 40px;
+  background-color: #3e3e3f5e;
+  border-radius: 5px;
+  margin-top: 70px;
   position: relative;
   text-align: center;
+  float: right;
 }
 
 .logo-container {
   position: absolute;
-  top: 650px;
-  left: 5%;
+  top: 450px;
+  left: 22%;
   z-index: 10;
 }
 
@@ -85,6 +89,299 @@
   width: auto;
   height: 100px;
 }
+
+/* CHATBOT */
+
+.react-chatbot-kit-user-chat-message-container {
+  display: flex;
+  margin: 15px 0;
+  justify-content: flex-end;
+}
+
+.react-chatbot-kit-user-avatar-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 12.5px;
+  background-color: #32cd32;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-chatbot-kit-user-avatar-icon {
+  fill: #fff;
+  width: 15px;
+  height: 15px;
+}
+
+.react-chatbot-kit-user-chat-message {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #585858;
+  font-weight: medium;
+  position: relative;
+  text-align: left;
+}
+
+.react-chatbot-kit-user-chat-message-arrow {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #f1f1f1;
+  position: absolute;
+  right: -7px;
+  top: 13px;
+}
+
+.react-chatbot-kit-chat-bot-message-container {
+  display: flex;
+  margin: 15px 0;
+  justify-content: flex-start;
+}
+
+.cork-bot-avatar {
+  color: white;
+  width: 130px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  background-color: rgba(177, 147, 100, 1);
+  margin-right: 15px;
+}
+.react-chatbot-kit-chat-bot-avatar-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  margin-right: 12.5px;
+  background-color: #d8d8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-chatbot-kit-chat-bot-avatar-icon {
+  fill: #494646;
+  width: 22.5px;
+  height: 22.5px;
+}
+
+.react-chatbot-kit-chat-bot-avatar-letter {
+  color: #1d1d1d;
+  margin: 0;
+  padding: 0;
+}
+
+.react-chatbot-kit-chat-bot-message {
+  background-color: #187bb1;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+  font-weight: medium;
+  position: relative;
+  width: 184.5px;
+  margin-left: auto;
+  text-align: left;
+}
+
+.react-chatbot-kit-chat-bot-message-arrow {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #187bb1;
+  position: absolute;
+  left: -7px;
+  top: 13px;
+}
+
+.react-chatbot-kit-chat-bot-loading-icon-container {
+  height: 17px;
+  width: 25px;
+}
+
+.chatbot-loader-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+#chatbot-loader #chatbot-loader-dot1 {
+  animation: load 1s infinite;
+}
+
+#chatbot-loader #chatbot-loader-dot2 {
+  animation: load 1s infinite;
+  animation-delay: 0.2s;
+}
+
+#chatbot-loader #chatbot-loader-dot3 {
+  animation: load 1s infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.react-chatbot-kit-chat-container {
+  border-radius: 15px;
+  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.5);
+  left: 20%;
+  position: relative;
+  width: 375px;
+  margin-bottom: 20px;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  height: 500px;
+  background-color: #fff;
+  border-radius: 3px;
+  border-radius: 5px;
+}
+
+.react-chatbot-kit-chat-header {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #efefef;
+  font-family: Arial;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #514f4f;
+  padding: 12.5px;
+  font-weight: bold;
+}
+
+.react-chatbot-kit-chat-input-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+
+.react-chatbot-kit-chat-message-container {
+  padding: 0 17.5px 10px 17.5px;
+  overflow: scroll;
+  height: 424px;
+}
+
+.react-chatbot-kit-chat-input {
+  width: 100%;
+  padding: 12.5px;
+  border: none;
+  font-size: 0.85rem;
+  border-top: 1px solid #d8d8d8;
+  border-bottom-left-radius: 5px;
+}
+
+.react-chatbot-kit-chat-input-form {
+  width: 100%;
+  display: flex;
+}
+
+.react-chatbot-kit-chat-input::placeholder {
+  color: #585858;
+}
+
+.react-chatbot-kit-chat-btn-send {
+  background-color: #187bb1;
+  width: 100px;
+  border: none;
+  color: #fff;
+  border-bottom-right-radius: 5px;
+}
+
+.react-chatbot-kit-chat-btn-send-icon {
+  fill: #fff;
+  width: 15px;
+  margin: 0 auto;
+}
+
+.react-chatbot-kit-error {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.react-chatbot-kit-error-container {
+  width: 260px;
+}
+
+.react-chatbot-kit-error-header {
+  font-size: 1.3rem;
+  color: #1d1d1d;
+  margin-bottom: 30px;
+}
+
+.react-chatbot-kit-error-docs {
+  display: block;
+  margin: 25px auto;
+  color: rgb(56, 104, 139);
+  padding: 8px;
+  border: 1px solid rgb(40, 152, 236);
+  width: 130px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* PRODUCTS */
+
+.bodyboards-container {
+  display: flex;
+  float: right;
+}
+
+.bodyboards-column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bodyboards-img {
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.5);
+  margin: 23px;
+}
+
+.description-column {
+  display: block;
+  align-items: center;
+}
+
+.description-list {
+  list-style-type: none;
+  margin-top: 120px;
+  padding: 0;
+  color: #3e3e3f;
+  font-weight: 900;
+}
+
+.description-list li {
+  margin-right: 50%;
+  margin-bottom: 300px;
+}
+
+/* SIZE CALCULATOR */
 
 .calculator {
   clear: both;
@@ -94,18 +391,17 @@
   align-items: center;
   justify-content: center;
   margin: 30px;
-
+  height: 600px;
   background-color: #1a1a1a;
   border-radius: 15px;
-  box-shadow: 3px 3px 17px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
   text-align: center;
-  color: #32cd32;
-  font-size: 30px;
-  font-weight: 700;
-  font-family: fantasy;
+  color: white;
+  font-size: 28px;
+  font-weight: 500;
 }
 
 p {
@@ -191,14 +487,71 @@ result {
   margin-top: 20px;
 }
 
-/* form styling */
+/* QUOTE */
+
+.order-form {
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 20px;
+  background-color: RGBA(217, 217, 217, 1);
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.order-form h2 {
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 5%;
+  left: 50%;
+}
+
+.order-form label {
+  color: #000;
+}
+
+.order-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.order-form select,
+.order-form input[type="checkbox"],
+.order-form input[type="text"] {
+  width: 80%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.order-form button[type="submit"] {
+  background-color: black;
+  color: #fff;
+  width: 270px;
+  height: 40;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.order-form p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* CONTACT */
 .formCard {
   position: relative;
-  clear: both;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  width: 350px;
+  width: auto;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -275,6 +628,7 @@ result {
 }
 
 .form button {
+  width: 90%;
   background-color: #3366cc;
   color: #fff;
   border: none;
@@ -289,77 +643,85 @@ result {
   background-color: #27408b;
 }
 
+/* Blog */
+
+.PostList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.PostList__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Post {
+  background-color: #99ff664d;
+  max-width: 300px;
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.Post img {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+
 footer {
-  position: relative;
+  position: absolute;
   text-align: center;
   bottom: 0;
   width: 100%;
   height: 2.5rem;
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 footer p {
   color: #2b03036b;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+/* ARROW */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+.top-btn-position {
+  position: fixed;
+  bottom: 15px;
+  right: 100px;
 }
 
-.body {
-  background: #ccc;
-  perspective-origin: center;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  overflow: hidden;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px 16px;
-  vertical-align: middle;
-  height: 500px;
-  width: 350px;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 20px 2px #ddd;
-  background: #eee;
-  color: #444;
-  transition: all 0.2s ease-in-out;
-  backface-visibility: hidden;
-  border-radius: 15px;
-}
-.card-body {
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  text-align: left;
-}
-
-.card:hover {
-  box-shadow: 0 2px 20px 6px #ddd;
+.top-btn-style {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background-color: #fff;
+  color: #333;
   cursor: pointer;
 }
-.card-footer {
-  display: flex;
-  justify-items: flex-start;
-}
 
-.card-footer span {
-  padding-right: 16px;
-  color: #777;
-  transition: all 2s ease-in-out;
-}
-
-.card-footer span:hover {
-  color: #222;
-  transform: scale(1.01);
+.top-btn-style:hover {
+  animation: none;
+  background-color: #333;
+  color: #fff;
+  border: 2px solid #fff;
 }

@@ -1,9 +1,10 @@
 import React from "react";
+import OrderForm from "../components/OrderForm";
 
 const Quote = () => {
   return (
     <div>
-      <h1>Quote</h1>
+      <OrderForm />
     </div>
   );
 };

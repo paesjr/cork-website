@@ -127,6 +127,10 @@ class BodyboardSizeCalculator extends Component {
             <br />
             <em>For higher body weight, use a thicker bodyboard.</em>
           </strong>
+          <br />
+          <br />
+          <br />
+          <br />
         </p>
         <label htmlFor="height">RIDER HEIGHT:</label>
         <input
@@ -150,6 +154,8 @@ class BodyboardSizeCalculator extends Component {
           id="result"
           dangerouslySetInnerHTML={{ __html: this.state.result }}
         ></label>
+        <br />
+        <br />
         <button className="findYourSize" onClick={this.calculateBoardLength}>
           FIND YOUR SIZE!{" "}
         </button>
