@@ -21,10 +21,15 @@ class ActionProvider {
     this.setChatbotMessage(message);
   };
 
+  timeHandler = () => {
+    const message = this.createChatBotMessage('The estimated time of manufactoring is approximately 4 weeks after the initial deposit.'
+    );
+    this.setChatbotMessage(message);
+  };
+
   setChatbotMessage = (message) => {
     this.setState((state) => ({
-      ...state,
-      messages: [...state.messages, message], // Corrected property name 'messages'
+      ...state, messages: [...state.messages, message], // Corrected property name 'messages'
     }));
   };
 }

@@ -7,8 +7,12 @@ class MessageParser {
   parse(message) {
     const lowercase = message.toLowerCase();
 
-    if (lowercase.includes("how much")) {
+    if (lowercase.includes("how much") || lowercase.includes("price") || lowercase.includes("purchase")) {
       this.actionProvider.helloWorldHandler();
+    }
+
+    if (lowercase.includes("time") || lowercase.includes("turnaround")) {
+      this.actionProvider.timeHandler();
     }
   }
 }

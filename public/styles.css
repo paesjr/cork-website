@@ -384,6 +384,7 @@
 /* SIZE CALCULATOR */
 
 .calculator {
+  z-index: 1;
   clear: both;
   position: relative;
   display: flex;
