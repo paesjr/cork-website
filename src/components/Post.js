@@ -1,11 +1,16 @@
 import React from "react";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Post = ({ post }) => {
   return (
     <div className="Post">
       <img src={post.image} alt={post.title} />
-      <h3>{post.title}</h3>
-      <p>{post.content}</p>
+      <h2>{post.title}</h2>
+      <br />
+      <h4>{post.content}</h4>
+      <br />
+      <p>Published on: {post.date}</p>
+      <ScrollToTop />
     </div>
   );
 };
