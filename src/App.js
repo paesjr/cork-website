@@ -10,6 +10,7 @@ import { Shop } from "./pages/shop/shop";
 import { Cart } from "./pages/cart/cart";
 import { ShopContextProvider } from "./context/shop-context";
 import PostList from "./components/PostList";
+import Checkout from "./pages/cart/checkout";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
             <Route path="/Blog" element={<PostList />} />
             <Route path="/Shop" element={<Shop />} />
             <Route path="/Cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </BrowserRouter>
       </ShopContextProvider>

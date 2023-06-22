@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { PRODUCTS } from "../products";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const ShopContext = createContext(null);
 
@@ -51,8 +52,11 @@ export const ShopContextProvider = (props) => {
   };
 
   return (
-    <ShopContext.Provider value={contextValue}>
-      {props.children}
-    </ShopContext.Provider>
+    <>
+      <ShopContext.Provider value={contextValue}>
+        {props.children}
+      </ShopContext.Provider>
+      <ScrollToTop />
+    </>
   );
 };

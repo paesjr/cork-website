@@ -1,4 +1,5 @@
 .cart {
+  clear: both;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +18,8 @@
 }
 
 .cartItem img {
+  border-radius: 25px;
+  padding: 10px;
   width: 200px;
 }
 
@@ -40,4 +43,18 @@
   border-radius: 8px;
   margin: 10px;
   cursor: pointer;
+  margin-bottom: 300px;
+}
+
+.subtotal {
+  color: black;
+  padding: 20px;
+  width: auto;
+  height: 20px;
+  display: flex;
+  background-color: lightgray;
+  align-items: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-style: dashed;
+  margin: 30px;
 }

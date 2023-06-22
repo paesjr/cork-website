@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import Footer from "../components/Footer";
 
 const OrderForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [contactNumber, setContactNumber] = useState("");
   const [deliveryAddress, setDeliveryAddress] = useState("");
   const [postCode, setPostCode] = useState("");
   const [country, setCountry] = useState("");
-  const [contactNumber, setContactNumber] = useState("");
+
   const [boardSize, setBoardSize] = useState("");
   const [template, setTemplate] = useState("");
   const [tailShape, setTailShape] = useState("");
@@ -15,6 +17,10 @@ const OrderForm = () => {
   const [contours, setContours] = useState(false);
   const [noseBulbs, setNoseBulbs] = useState(false);
   const [total, setTotal] = useState(0);
+
+  const handleCountryChange = (e) => {
+    setCountry(e.target.value);
+  };
 
   const handleBoardSizeChange = (e) => {
     setBoardSize(e.target.value);
@@ -45,6 +51,23 @@ const OrderForm = () => {
     let totalPrice = 395; // Base price
 
     // Calculate additional costs based on user choices
+
+    if (country === "NewZealand") {
+      totalPrice += 60;
+    }
+
+    if (country === "Australia") {
+      totalPrice += 120;
+    }
+
+    if (country === "USA") {
+      totalPrice += 220;
+    }
+
+    if (country === "UK") {
+      totalPrice += 220;
+    }
+
     if (channels === "Quad") {
       totalPrice += 25;
     }
@@ -85,6 +108,13 @@ const OrderForm = () => {
           />
           <input
             type="text"
+            placeholder="CONTACT NUMBER"
+            value={contactNumber}
+            onChange={(e) => setContactNumber(e.target.value)}
+          />
+
+          <input
+            type="text"
             placeholder="DELIVERY ADDRESS"
             value={deliveryAddress}
             onChange={(e) => setDeliveryAddress(e.target.value)}
@@ -95,18 +125,22 @@ const OrderForm = () => {
             value={postCode}
             onChange={(e) => setPostCode(e.target.value)}
           />
-          <input
-            type="text"
-            placeholder="COUNTRY"
+
+          {/* Set values for the most common countries for orders are replacing the NZ Post API momentarialy as we're still waiting for a reply */}
+
+          <select
+            id="country"
+            className="input-field"
             value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="CONTACT NUMBER"
-            value={contactNumber}
-            onChange={(e) => setContactNumber(e.target.value)}
-          />
+            onChange={handleCountryChange}
+          >
+            <option value="">Select Country</option>
+            <option value="NewZealand">New Zealand</option>
+            <option value="Australia">Australia</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+          </select>
+
           <label htmlFor="boardSize">Board Size:</label>
           <select
             id="boardSize"
@@ -197,6 +231,7 @@ const OrderForm = () => {
         </form>
         <p>Total: ${total}</p>
       </div>
+      <Footer />
     </>
   );
 };

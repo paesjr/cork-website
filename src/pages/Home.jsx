@@ -19,6 +19,7 @@ function Home() {
           actionProvider={ActionProvider}
         />
       </div>
+      <Footer />
     </>
   );
 }

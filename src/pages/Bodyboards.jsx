@@ -36,8 +36,8 @@ function Bodyboards() {
             <li>DK BODYBOARD</li>
           </ol>
         </div>
+        <ScrollToTop />
       </div>
-      <ScrollToTop />
     </>
   );
 }

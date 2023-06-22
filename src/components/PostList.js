@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "./Post";
+import Footer from "./Footer";
 
 const PostList = () => {
   // Post data
@@ -71,6 +72,7 @@ const PostList = () => {
           <Post key={post.id} post={post} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

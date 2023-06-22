@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Footer from "../components/Footer";
 
 class BodyboardSizeCalculator extends Component {
   constructor(props) {
@@ -115,55 +116,58 @@ class BodyboardSizeCalculator extends Component {
 
   render() {
     return (
-      <div className="calculator">
-        <h1>
-          <b>BODYBOARD SIZE CALCULATOR</b>
-        </h1>
-        <p>
-          ★
-          <strong>
-            {" "}
-            RIDER PREFERENCE MAY VARY, THIS CALCULATOR IS ONLY A GUIDE
+      <>
+        <div className="calculator">
+          <h1>
+            <b>BODYBOARD SIZE CALCULATOR</b>
+          </h1>
+          <p>
+            ★
+            <strong>
+              {" "}
+              RIDER PREFERENCE MAY VARY, THIS CALCULATOR IS ONLY A GUIDE
+              <br />
+              <em>For higher body weight, use a thicker bodyboard.</em>
+            </strong>
             <br />
-            <em>For higher body weight, use a thicker bodyboard.</em>
-          </strong>
+            <br />
+            <br />
+            <br />
+          </p>
+          <label htmlFor="height">RIDER HEIGHT:</label>
+          <input
+            type="number"
+            id="height"
+            name="height"
+            placeholder="  ENTER HEIGHT (CM)"
+            value={this.state.height}
+            onChange={this.handleHeightChange}
+          />
+          <label htmlFor="weight">RIDER WEIGHT:</label>
+          <input
+            type="number"
+            id="weight"
+            name="weight"
+            placeholder="  ENTER WEIGHT (KG)"
+            value={this.state.weight}
+            onChange={this.handleWeightChange}
+          />
+          <label
+            id="result"
+            dangerouslySetInnerHTML={{ __html: this.state.result }}
+          ></label>
           <br />
           <br />
-          <br />
-          <br />
-        </p>
-        <label htmlFor="height">RIDER HEIGHT:</label>
-        <input
-          type="number"
-          id="height"
-          name="height"
-          placeholder="  ENTER HEIGHT (CM)"
-          value={this.state.height}
-          onChange={this.handleHeightChange}
-        />
-        <label htmlFor="weight">RIDER WEIGHT:</label>
-        <input
-          type="number"
-          id="weight"
-          name="weight"
-          placeholder="  ENTER WEIGHT (KG)"
-          value={this.state.weight}
-          onChange={this.handleWeightChange}
-        />
-        <label
-          id="result"
-          dangerouslySetInnerHTML={{ __html: this.state.result }}
-        ></label>
-        <br />
-        <br />
-        <button className="findYourSize" onClick={this.calculateBoardLength}>
-          FIND YOUR SIZE!{" "}
-        </button>
-        <p>
-          Power by <b>CORK BODYBOARDS</b>
-          <br /> ©️ all rights reserved
-        </p>
-      </div>
+          <button className="findYourSize" onClick={this.calculateBoardLength}>
+            FIND YOUR SIZE!{" "}
+          </button>
+          <p>
+            Power by <b>CORK BODYBOARDS</b>
+            <br /> ©️ all rights reserved
+          </p>
+        </div>
+        <Footer />
+      </>
     );
   }
 }
