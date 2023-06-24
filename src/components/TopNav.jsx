@@ -41,10 +41,6 @@ const TopNav = () => {
       name: "Cart",
       icon: <ShoppingCart size={32} />,
     },
-    {
-      path: "/checkout",
-      name: "Checkout",
-    },
   ];
 
   const [isOpen, setIsOpen] = useState(false);

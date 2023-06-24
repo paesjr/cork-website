@@ -22,14 +22,30 @@ class ActionProvider {
   };
 
   timeHandler = () => {
-    const message = this.createChatBotMessage('The estimated time of manufactoring is approximately 4 weeks after the initial deposit.'
+    const message = this.createChatBotMessage(
+      "The estimated time of manufactoring is approximately 4 weeks after the initial deposit."
+    );
+    this.setChatbotMessage(message);
+  };
+
+  materialHandler = () => {
+    const message = this.createChatBotMessage(
+      "Cork bodyboards are made of upcycle EPS foam, plant fibers, timber and cork. Is also sealed with varnish and beeswax."
+    );
+    this.setChatbotMessage(message);
+  };
+
+  defaultHandler = () => {
+    const message = this.createChatBotMessage(
+      "I'm sorry, but I couldn't understand your question. Can you please rephrase or ask a human being in the contact page please?"
     );
     this.setChatbotMessage(message);
   };
 
   setChatbotMessage = (message) => {
     this.setState((state) => ({
-      ...state, messages: [...state.messages, message], // Corrected property name 'messages'
+      ...state,
+      messages: [...state.messages, message],
     }));
   };
 }

@@ -732,6 +732,46 @@ footer a {
   border: 2px solid green;
 }
 
-.payment h1 {
-  color: #000;
+/* CHECKOUT LOADER  */
+
+.loader {
+  width: 260px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(9, 188, 9);
+  width: 0%;
+  height: 100%;
+  border-radius: 10px;
+  animation: load 3.5s ease-in-out infinite;
+  box-shadow: rgb(9, 188, 9) 0px 2px 29px 0px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes load {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    right: 0;
+    left: unset;
+  }
+}
+
+.processing {
+  color: #3e3e3f;
+  text-align: center;
+  padding-top: 250px;
+  margin-bottom: 30px;
 }
