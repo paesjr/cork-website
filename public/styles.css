@@ -242,11 +242,13 @@
 
 .react-chatbot-kit-chat-container {
   border-radius: 15px;
-  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.5);
   left: 20%;
   position: relative;
   width: 375px;
   margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .react-chatbot-kit-chat-inner-container {
@@ -342,43 +344,102 @@
   font-size: 1rem;
 }
 
-/* PRODUCTS */
+/* BODYBOARDS */
 
-.bodyboards-container {
-  display: flex;
-  float: right;
+.bodyboard-header {
+  color: whitesmoke;
+  background-color: #3e3e3f;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 2px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
 }
 
-.bodyboards-column {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .bodyboards-img {
   height: 300px;
   width: 300px;
-  border-radius: 15px;
-  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.5);
-  margin: 23px;
+  border-radius: 15%;
+  border: 8px solid white;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  margin: 10px;
 }
 
-.description-column {
-  display: block;
+.bodyboards-container {
+  display: flex;
+  margin: 25px;
+}
+
+.bodyboards-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bodyboard-card {
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  padding: 25px;
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.description-list {
-  list-style-type: none;
-  margin-top: 120px;
-  padding: 0;
-  color: #3e3e3f;
-  font-weight: 900;
+.bodyboard-inner {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
 }
 
-.description-list li {
-  margin-right: 50%;
-  margin-bottom: 300px;
+.bodyboard-card:hover .bodyboard-inner {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+  border-radius: 15%;
+  border: 8px solid white;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
+  margin: 10px;
+  background-color: #f0f0f0;
+  color: #3e3e3f;
+  padding: 20px;
 }
 
 /* SIZE CALCULATOR */
@@ -394,7 +455,7 @@
   height: 600px;
   background-color: #1a1a1a;
   border-radius: 15px;
-  box-shadow: 8px 8px 8px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5);
   margin: 30px;
 }
 
@@ -412,15 +473,15 @@ p {
 }
 
 label {
-  font-size: 22px;
+  font-size: 20px;
   color: #ccffcc;
 }
 
 input[type="number"],
 select {
-  font-size: 16px;
-  padding: 5px;
-  border-radius: 9999px;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 8px;
   border: none;
   outline: none;
   box-shadow: inset 2px 5px 10px black;
@@ -515,7 +576,6 @@ result {
 
 .order-form label {
   display: block;
-  margin-bottom: 10px;
 }
 
 .order-form select,
@@ -525,6 +585,7 @@ result {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-top: 5px;
 }
 
 .order-form button[type="submit"] {
@@ -552,11 +613,13 @@ result {
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  width: auto;
-  height: 400px;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .formTitle {
@@ -595,8 +658,8 @@ result {
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin-bottom: 20px;
   outline: 0;
-  width: 88%;
-  background-color: transparent;
+  width: 100%;
+  background-color: whitesmoke;
 }
 
 .form .group input:placeholder-shown + label,
@@ -629,7 +692,7 @@ result {
 }
 
 .form button {
-  width: 90%;
+  width: 110%;
   background-color: #3366cc;
   color: #fff;
   border: none;

@@ -12,7 +12,7 @@ class MessageParser {
       lowercase.includes("price") ||
       lowercase.includes("purchase")
     ) {
-      this.actionProvider.helloWorldHandler();
+      this.actionProvider.priceHandler();
     }
 
     if (lowercase.includes("time") || lowercase.includes("turnaround")) {
@@ -23,6 +23,22 @@ class MessageParser {
       this.actionProvider.materialHandler();
     }
 
+    if (lowercase.includes("sell") || lowercase.includes("product")) {
+      this.actionProvider.productHandler();
+    }
+
+    if (lowercase.includes("contact") || lowercase.includes("touch")) {
+      this.actionProvider.contactHandler();
+    }
+
+    if (
+      lowercase.includes("size") ||
+      lowercase.includes("length") ||
+      lowercase.includes("dimensions")
+    ) {
+      this.actionProvider.sizeHandler();
+    }
+
     // Fallback response
     if (
       !lowercase.includes("how much") &&
@@ -31,7 +47,14 @@ class MessageParser {
       !lowercase.includes("time") &&
       !lowercase.includes("turnaround") &&
       !lowercase.includes("material") &&
-      !lowercase.includes("made")
+      !lowercase.includes("made") &&
+      !lowercase.includes("sell") &&
+      !lowercase.includes("product") &&
+      !lowercase.includes("contact") &&
+      !lowercase.includes("touch") &&
+      !lowercase.includes("size") &&
+      !lowercase.includes("length") &&
+      !lowercase.includes("dimensions")
     ) {
       this.actionProvider.defaultHandler();
     }

@@ -13,10 +13,10 @@ class BodyboardSizeCalculator extends Component {
 
   calculateBoardLength = () => {
     const { height, weight } = this.state;
-    let text = "★ INVALID INPUT ★ <br/>-- try a lower weight --";
+    let text = "★ INPUT EXCEEDS LIMITS ★<p>try a lower weight</p>";
 
     if (height <= 50 && weight <= 3) {
-      text = "★ INVALID INPUT ★";
+      text = "★ INPUT TOO LOW ★ <p>please enter valid values</p>";
     } else if (height <= 130) {
       if (weight <= 25) {
         text = '★ Your Bodyboard size is 30"';

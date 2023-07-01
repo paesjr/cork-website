@@ -13,7 +13,6 @@ export const PRODUCTS = [
     productName: "Leash",
     price: 55.0,
     productImage: product1,
-    apiId: "price_1NLwOlAgvl9FmJ1NCcHXwHgb",
   },
   {
     id: 2,
@@ -45,15 +44,15 @@ export const PRODUCTS = [
   },
   {
     id: 6,
-    productName: "Timber bottom Bodyboard",
+    productName: "Timber bottom Bodyboard (fully featured)",
     price: 595.0,
     productImage: product6,
     apiId: "price_1NLwaBAgvl9FmJ1Nelqh1vig",
   },
   {
     id: 7,
-    productName: "All cork Bodyboard",
-    price: 495.0,
+    productName: "All cork Bodyboard (plain shape)",
+    price: 395.0,
     productImage: product7,
     apiId: "price_1NLwe9Agvl9FmJ1NOSpgm5mI",
   },
